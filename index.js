@@ -13,7 +13,7 @@ app.get('/', function(req, res){
   res.sendFile('public/index.html', { root : __dirname});
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 9000);
 
 //Declaring command groups and configuring where commands are stored (Discord.js-commando)
 bot.registry.registerGroup('random', 'Random');
