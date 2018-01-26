@@ -12,20 +12,24 @@
   },
   "devDependencies": {},
   "scripts": {
-	"start": "node app.js",
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jafar-draenor",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jafar-Draenor/wowghost.git"
+    "url": "git+https://github.com/Jafar-Draenor/wowghost.git"
   },
   "engines": {
     "node": "7.7.3"
   },
   "keywords": [
     "heroku",
-	"discord.js"
-  ]
+    "discord.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/Jafar-Draenor/wowghost/issues"
+  },
+  "homepage": "https://github.com/Jafar-Draenor/wowghost#readme"
 }
