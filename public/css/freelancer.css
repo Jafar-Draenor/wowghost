@@ -327,6 +327,11 @@ form .row:first-child .floating-label-form-group {
   color: #fff;
 }
 
+.img-fluid {
+  max-width: 75%;
+  height: 75%;
+}
+
 .copyright {
   background-color: #1a252f;
 }
