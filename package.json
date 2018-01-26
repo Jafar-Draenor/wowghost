@@ -20,6 +20,9 @@
     "type": "git",
     "url": "https://github.com/Jafar-Draenor/wowghost.git"
   },
+  "engines": {
+    "node": "7.7.3"
+  },
   "keywords": [
     "heroku",
 	"discord.js"
