@@ -1,0 +1,13 @@
+WoW Ghost is a discord.js bot that compiles information about a character you specify into one location.
+
+It provides links to wowprogress, wow armory, raider.io and wowhead as well as providing an overview of their progress, traits,
+item level, gear, race, class and spec.
+
+
+Commands
+
+  - !ghost <character name> <realm name>
+  - !ghosthelp
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------
+Created by Jagone@Draenor
