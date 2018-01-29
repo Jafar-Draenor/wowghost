@@ -17,7 +17,7 @@ var serverCount = {
 app.use(express.static('public'))
 
 app.get('/', function(req, res){
-  res.sendFile('public/index.html', { root : __dirname});
+  res.sendFile('public/index.ejs', { root : __dirname});
   res.render('index',{user: "Great User",server:"2"});
 });
 
