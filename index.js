@@ -6,13 +6,7 @@ const bot = new commando.Client({
 
 //Express
 var express = require('express');
-var app = express();
-app.set('view engine', 'ejs');
-var guildAmount = bot.guilds.size;
-var serverCount = {
-        "servercount": guildAmount
-}
-  
+var app = express(); 
 
 app.use(express.static('public'))
 
@@ -24,10 +18,8 @@ var serverCount = {
 }
 
 app.get('/', function(req, res){
-  res.sendFile('public/index.ejs', { root : __dirname});
+  res.sendFile('public/index.html', { root : __dirname});
   res.send(serverCount);
-  res.render('index.ejs',{
-    "server" : "2"});
 });
 
 app.listen(process.env.PORT || 9000);
