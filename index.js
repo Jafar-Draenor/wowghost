@@ -6,16 +6,15 @@ const bot = new commando.Client({
 
 //Express
 var express = require('express');
-var app = express(); 
+var app = express();
 
-app.use(express.static('public'))
-
-var guildAmount = client.guilds.size;
-
-
+var guildAmount = bot.guilds.size;
 var serverCount = {
         "servercount": guildAmount
 }
+  
+
+app.use(express.static('public'))
 
 app.get('/', function(req, res){
   res.sendFile('public/index.html', { root : __dirname});
