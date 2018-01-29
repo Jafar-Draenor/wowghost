@@ -1,6 +1,11 @@
 //Constants Discord.js-commando
 const commando = require('discord.js-commando');
-const bot = new commando.Client();
+const bot = new commando.Client({
+    commandPrefix: '<Insert Your Prefix Here>',
+    owner: '<Insert Your User ID Here>',
+    disableEveryone: true,
+    unknownCommandResponse: false
+});
 
 //Express
 var express = require('express');
