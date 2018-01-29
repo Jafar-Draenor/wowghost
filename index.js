@@ -15,15 +15,13 @@ app.use(express.static('public'))
 
 var guildAmount = bot.guilds.size;
 
-var serverCount = {
-        "servercount": guildAmount
-}
 
 app.get('/', function(req, res){
   res.sendFile('public/index.html', { root : __dirname});
-  res.send(servercount)
+  res.render('public/index.html', {guildAMount:guildAmount})
 });
 
+console.log(bot.guilds.size)
 app.listen(process.env.PORT || 9000);
 
 //Declaring command groups and configuring where commands are stored (Discord.js-commando)
