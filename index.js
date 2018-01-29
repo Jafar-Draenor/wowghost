@@ -16,8 +16,16 @@ var serverCount = {
 
 app.use(express.static('public'))
 
+var guildAmount = client.guilds.size;
+
+
+var serverCount = {
+        "servercount": guildAmount
+}
+
 app.get('/', function(req, res){
   res.sendFile('public/index.ejs', { root : __dirname});
+  res.send(serverCount);
   res.render('index.ejs',{
     "server" : "2"});
 });
