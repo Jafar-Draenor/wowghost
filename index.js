@@ -4,12 +4,12 @@ const bot = new commando.Client({
     unknownCommandResponse: false
 });
 
-console.log(bot.servers)
-
 //Express
 var express = require('express');
 
 var app = express();
+
+app.set('view engine', 'html')
 
 app.use(express.static('public'))
 
@@ -36,18 +36,5 @@ bot.registry.registerCommandsIn(__dirname + "/commands"); //Directory for the co
 
 //Server count GET request
 var theUrl = "https://wowghost.herokuapp.com"
-
-httpGetAsync
-
-function httpGetAsync(theUrl, callback)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
-}
 
 bot.login('MzMxMjQ4MzUyMDQ4MDU0Mjgy.DDsytw.hyEbsGU7y548RPQrTQ3M8_q3q-c'); //Login token for the bot
