@@ -18,7 +18,8 @@ app.use(express.static('public'))
 
 app.get('/', function(req, res){
   res.sendFile('public/index.ejs', { root : __dirname});
-  res.render('index',{user: "Great User",server:"2"});
+  res.render('index',{
+    "server" : "2"});
 });
 
 app.listen(process.env.PORT || 9000);
