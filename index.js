@@ -18,7 +18,7 @@ app.use(express.static('public'))
 
 app.get('/', function(req, res){
   res.sendFile('public/index.ejs', { root : __dirname});
-  res.render('index',{
+  res.render('index.ejs',{
     "server" : "2"});
 });
 
