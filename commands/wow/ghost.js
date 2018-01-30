@@ -1,8 +1,11 @@
 //HTTP Requests
 var request = require('request')
 
+//Config File
+var config = require('./config')
+
 //Variables Blizzard API
-    var apikey = 'qc8gwwuezz8de9arbnk4xx59rjb3cnez'
+    var apikey = config.blizzardToken
     var region = 'eu'
     var locale = 'en_GB'
     var url = ''
@@ -207,6 +210,7 @@ try {
         var validcheck = ""
         var raid = []
         var counter = "1"
+
     //Mythic+ (2s, 5s, 10s, 15s)
         for (index = 0; index < response.data.achievements.criteria.length; index++) {
         validcheck = JSON.stringify(response.data.achievements.criteria[index])
@@ -222,6 +226,7 @@ try {
             }
         
         }
+
     //Check for Curve and Edge for Raid Tiers
         for (index = 0; index < response.data.achievements.achievementsCompleted.length; index++) {
         validcheck = JSON.stringify(response.data.achievements.achievementsCompleted[index])
@@ -247,6 +252,7 @@ try {
             EdgeANT = "Yes"
             }
         }
+
     // //Artifact Traits
         var relics = ''
             relics = JSON.stringify(response.data.items.mainHand.relics.length)
@@ -256,6 +262,7 @@ try {
         }
         console.log(relics)
         tartifacttraits = tartifacttraits - relics
+
     //EN Normal
         for (index = 0; index < response.data.progression.raids[35].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[35].bosses[index].name)
@@ -269,6 +276,7 @@ try {
         tprogENN = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //EN Heroic
         for (index = 0; index < response.data.progression.raids[35].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[35].bosses[index].name)
@@ -282,6 +290,7 @@ try {
         tprogENHC = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //EN Mythic
         for (index = 0; index < response.data.progression.raids[35].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[35].bosses[index].name)
@@ -296,6 +305,7 @@ try {
         tprogENM = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //TOV Normal
         for (index = 0; index < response.data.progression.raids[36].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[36].bosses[index].name)
@@ -308,6 +318,7 @@ try {
         tprogTOVN = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //TOV Heroic
         for (index = 0; index < response.data.progression.raids[36].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[36].bosses[index].name)
@@ -322,6 +333,7 @@ try {
         tprogTOVHC = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //TOV Mythic
         for (index = 0; index < response.data.progression.raids[36].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[36].bosses[index].name)
@@ -336,6 +348,7 @@ try {
         tprogTOVM = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //Nighthold Normal
         for (index = 0; index < response.data.progression.raids[37].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[37].bosses[index].name)
@@ -349,7 +362,8 @@ try {
         counter = counter-1
         tprogNHN = counter // Change prog to the correct raid
         counter = 1
-        tcheckprog = []   
+        tcheckprog = []  
+
     //Nighthold Heroic
         for (index = 0; index < response.data.progression.raids[37].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[37].bosses[index].name)
@@ -364,6 +378,7 @@ try {
         tprogNHHC = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //Nighthold Mythic
         for (index = 0; index < response.data.progression.raids[37].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[37].bosses[index].name)
@@ -378,6 +393,7 @@ try {
         tprogNHM = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //TOS Normal
         for (index = 0; index < response.data.progression.raids[38].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[38].bosses[index].name)
@@ -390,6 +406,7 @@ try {
         tprogTOSN = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //TOS Heroic
         for (index = 0; index < response.data.progression.raids[38].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[38].bosses[index].name)
@@ -404,6 +421,7 @@ try {
         tprogTOSHC = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //TOS Mythic
         for (index = 0; index < response.data.progression.raids[38].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[38].bosses[index].name)
@@ -418,6 +436,7 @@ try {
         tprogTOSM = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //Antorus Normal
         for (index = 0; index < response.data.progression.raids[39].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[39].bosses[index].name)
@@ -430,6 +449,7 @@ try {
         tprogANTN = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+
     //Antorus Heroic
         for (index = 0; index < response.data.progression.raids[39].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[39].bosses[index].name)
@@ -444,6 +464,7 @@ try {
         tprogANTHC = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
+        
     //Antorus Mythic
         for (index = 0; index < response.data.progression.raids[39].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[39].bosses[index].name)

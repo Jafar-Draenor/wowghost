@@ -4,6 +4,10 @@ const bot = new commando.Client({
     unknownCommandResponse: false
 });
 
+//Config File
+var config = require('./config')
+
+
 //Express
 var express = require('express');
 var app = express();
