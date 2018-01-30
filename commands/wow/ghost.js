@@ -2,7 +2,7 @@
 var request = require('request')
 
 //Config File
-var config = require('./config')
+var config = require('getconfig');
 
 //Variables Blizzard API
     var apikey = config.blizzardToken
@@ -464,7 +464,7 @@ try {
         tprogANTHC = counter // Change prog to the correct raid
         counter = 1
         tcheckprog = []
-        
+
     //Antorus Mythic
         for (index = 0; index < response.data.progression.raids[39].bosses.length; index++) {
             raid[0] = (response.data.progression.raids[39].bosses[index].name)

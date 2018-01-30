@@ -5,7 +5,7 @@ const bot = new commando.Client({
 });
 
 //Config File
-var config = require('./config')
+var config = require('getconfig');
 
 
 //Express
