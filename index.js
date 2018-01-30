@@ -5,8 +5,8 @@ const bot = new commando.Client({
 });
 
 //Config File
-var discordkey = process.env.discordToken
-var blizzardkey = process.env.blizzardToken
+let discordkey = process.env.discordToken
+let blizzardkey = process.env.blizzardToken
 
 
 //Express
