@@ -32,4 +32,4 @@ bot.registry.registerGroup('wow', 'Wow')
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands"); //Directory for the command files
 
-bot.login('MzMxMjQ4MzUyMDQ4MDU0Mjgy.DDsytw.hyEbsGU7y548RPQrTQ3M8_q3q-c'); //Login token for the bot
+bot.login(config.discordToken); //Login token for the bot
