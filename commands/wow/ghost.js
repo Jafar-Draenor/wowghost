@@ -1,11 +1,9 @@
 //HTTP Requests
 var request = require('request')
 
-//Config File
-var config = require('getconfig');
 
 //Variables Blizzard API
-    var apikey = config.blizzardToken
+    var apikey = blizzardkey
     var region = 'eu'
     var locale = 'en_GB'
     var url = ''

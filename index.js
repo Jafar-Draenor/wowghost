@@ -5,7 +5,8 @@ const bot = new commando.Client({
 });
 
 //Config File
-var config = require('getconfig');
+var discordkey = process.env.discordToken
+var blizzardkey = process.env.blizzardToken
 
 
 //Express
@@ -36,4 +37,4 @@ bot.registry.registerGroup('wow', 'Wow')
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands"); //Directory for the command files
 
-bot.login(config.discordToken); //Login token for the bot
+bot.login(discordkey); //Login token for the bot
