@@ -5,7 +5,6 @@ const bot = new commando.Client({
 });
 
 //Config File
-let discordkey = process.env.discordToken
 let blizzardkey = process.env.blizzardToken
 
 
@@ -37,4 +36,4 @@ bot.registry.registerGroup('wow', 'Wow')
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands"); //Directory for the command files
 
-bot.login(discordkey); //Login token for the bot
+bot.login('MzMxMjQ4MzUyMDQ4MDU0Mjgy.XKdT2Q.Nhv1cnkjDGN1cjSdxw_7SMdAqBs'); //Login token for the bot
