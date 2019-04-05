@@ -4,10 +4,6 @@ const bot = new commando.Client({
     unknownCommandResponse: false
 });
 
-//Config File
-let blizzardkey = process.env.blizzardToken
-
-
 //Express
 var express = require('express');
 var app = express();
